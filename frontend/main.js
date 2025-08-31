@@ -1,4 +1,10 @@
+
 $(document).ready(function () {
+  // Hide face detection and loader UI, show main assistant UI on load
+  $("#FaceAuth").hide();
+  $("#FaceAuthSuccess").hide();
+  $("#Start").hide();
+  $("#Oval").show();
 
   eel.init()()
   $(".text").textillate({

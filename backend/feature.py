@@ -26,6 +26,7 @@ import pygame
 from backend.command import speak
 from backend.config import ASSISTANT_NAME
 import sqlite3
+import os
 
 from backend.helper import extract_yt_term, remove_words
 conn = sqlite3.connect("jarvis.db")
@@ -36,7 +37,12 @@ pygame.mixer.init()
 # Define the function to play sound
 @eel.expose
 def play_assistant_sound():
-    sound_file = r"C:\Users\patha\Videos\Jarvis\frontend\assets\audio\start_sound.mp3"
+    sound_file = os.path.join(os.path.dirname(__file__), '..', 'frontend', 'assets', 'audio', 'start_sound.mp3')
+    sound_file = os.path.abspath(sound_file)
+    print(f"[DEBUG] Looking for sound file at: {sound_file}")
+    if not os.path.exists(sound_file):
+        print(f"[ERROR] Sound file does not exist: {sound_file}")
+        return
     pygame.mixer.music.load(sound_file)
     pygame.mixer.music.play()
     
