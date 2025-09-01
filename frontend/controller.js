@@ -2,8 +2,10 @@ $(document).ready(function () {
   // Display Speak Message
   eel.expose(DisplayMessage);
   function DisplayMessage(message) {
-    $(".siri-message li:first").text(message);
-    $(".siri-message").textillate("start");
+    // Set the text directly for .siri-message (not as a list item)
+    $(".siri-message").text(message);
+    // Optionally, you can keep textillate if you want animation:
+    // $(".siri-message").textillate("start");
   }
 
   eel.expose(ShowHood);

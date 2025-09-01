@@ -1,13 +1,13 @@
 # Ignore the envJarvis directory
 /envjarvis/
 
-# Ignore contact.csv
+# Not install/ not use contact.csv contact.csv
 contacts.csv
 
-# Ignore jarvis.db
+# Leave jarvis.db
 jarvis.db
 
-# Ignore Python bytecode files in backend
+# Dont take Python bytecode files in backend
 /backend/__pycache__/ 
 
 # Ignore backend cookie.json

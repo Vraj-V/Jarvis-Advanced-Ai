@@ -193,7 +193,7 @@ def whatsApp(Phone, message, flag, name):
 
 def chatBot(query):
     user_input = query.lower()
-    chatbot = hugchat.ChatBot(cookie_path="backend\cookie.json")
+    chatbot = hugchat.ChatBot(cookie_path="backend/cookie.json")
     id = chatbot.new_conversation()
     chatbot.change_conversation(id)
     response =  chatbot.chat(user_input)
