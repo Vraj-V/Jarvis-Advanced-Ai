@@ -1,3 +1,29 @@
+// Event delegation for close button
+document.addEventListener('click', function(e) {
+  if (e.target && e.target.id === 'close-siriwave') {
+    var siriwaveContainer = document.getElementById('siriwave-container');
+    if (siriwaveContainer) {
+      siriwaveContainer.style.display = 'none';
+    }
+    // Stop Siriwave animation if exists
+    if (window.siriWave && typeof window.siriWave.stop === 'function') {
+      window.siriWave.stop();
+    }
+    // Clear output instantly
+    var output = document.getElementById('output');
+    if (output) {
+      output.innerHTML = '';
+    }
+  }
+});
+
+// Example: If you update output, do it instantly
+function showOutput(text) {
+  var output = document.getElementById('output');
+  if (output) {
+    output.innerHTML = text;
+  }
+}
 
 $(document).ready(function () {
   // Hide face detection and loader UI, show main assistant UI on load

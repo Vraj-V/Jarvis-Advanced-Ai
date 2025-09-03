@@ -17,7 +17,7 @@ import subprocess
 import time
 import webbrowser
 import eel
-from hugchat import hugchat 
+from hugchat import hugchat
 import pvporcupine
 import pyaudio
 import pyautogui

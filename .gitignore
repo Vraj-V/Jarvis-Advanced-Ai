@@ -1,6 +1,6 @@
 # Ignore the envJarvis directory
 /envjarvis/
-
+/envJarvis311
 # Not install/ not use contact.csv contact.csv
 contacts.csv
 
