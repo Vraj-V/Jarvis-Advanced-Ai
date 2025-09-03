@@ -12,3 +12,5 @@ jarvis.db
 
 # Ignore backend cookie.json
 /backend/cookie.json
+/build
+/dist

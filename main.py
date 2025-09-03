@@ -5,7 +5,7 @@ import eel
 # from backend.auth.recoganize import AuthenticateFace
 from backend.feature import *
 from backend.command import *
-
+from backend import chat
 
 
 def start():

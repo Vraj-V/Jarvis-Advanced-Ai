@@ -2,7 +2,6 @@ import time
 import pyttsx3
 import speech_recognition as sr
 import eel
-
 def speak(text):
     text = str(text)
     engine = pyttsx3.init('sapi5')
@@ -80,8 +79,9 @@ def takeAllCommands(message=None):
                 from backend.feature import PlayYoutube
                 PlayYoutube(query)
             else:
-                from backend.feature import chatBot
-                chatBot(query)
+                from backend.chat import get_ai_response
+                response = get_ai_response(query)
+                speak(response)
         else:
             speak("No command was given.")
     except Exception as e:
